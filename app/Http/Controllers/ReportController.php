@@ -14,6 +14,7 @@ class ReportController extends Controller
             ->groupBy('date')
             ->get();
         
-        dd($reports);
+        // dd($reports);
+        return view('dashboard.report.index');
     }
 }
