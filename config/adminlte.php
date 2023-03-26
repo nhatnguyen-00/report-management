@@ -292,7 +292,7 @@ return [
     'menu' => [
         [
             'text' => 'report',
-            'url' => '/reports',
+            'url'  => 'dashboard/reports',
         ],
     ],
 

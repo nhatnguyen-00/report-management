@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReportController;
+use App\Http\Controllers\Api\ReportController as ApiReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    route::get('/reports', [ReportController::class, 'index']);
+    route::get('/dashboard/reports', [ReportController::class, 'index']);
+
+    Route::get('api/reports', [ApiReportController::class, 'index']);
+
 });
 
 require __DIR__.'/auth.php';
