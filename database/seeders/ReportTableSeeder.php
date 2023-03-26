@@ -15,7 +15,7 @@ class ReportTableSeeder extends Seeder
     {
         Report::truncate();
         Report::create([
-            'date' => Carbon::now()->addDays(1),
+            'date' => Carbon::now()->subDays(1),
             'data' => [
                 'key1' => 'value1',
                 'key2' => 'value2',
@@ -23,7 +23,7 @@ class ReportTableSeeder extends Seeder
         ]);
 
         Report::create([
-            'date' => Carbon::now()->addDays(2),
+            'date' => Carbon::now()->subDays(2),
             'data' => [
                 'key1' => 'value1',
                 'key2' => 'value2',
@@ -31,7 +31,7 @@ class ReportTableSeeder extends Seeder
         ]);
 
         Report::create([
-            'date' => Carbon::now()->addDays(3),
+            'date' => Carbon::now()->subDays(3),
             'data' => [
                 'key1' => 'value1',
                 'key2' => 'value2',
@@ -39,7 +39,7 @@ class ReportTableSeeder extends Seeder
         ]);
 
         Report::create([
-            'date' => Carbon::now()->addDays(4),
+            'date' => Carbon::now()->subDays(4),
             'data' => [
                 'key1' => 'value1',
                 'key2' => 'value2',
